@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: file-storage
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+  datasource:
+    url: jdbc:postgresql://localhost:5432/filestorage
+    username:
+    password:
+    driver-class-name: org.postgresql.Driver
+  servlet:
+    multipart:
+      max-file-size: -1
+      max-request-size: -1
+
+security:
+  jwt:
+    secret:
+    access: 3600000
+    refresh: 2592000000
+
+minio:
+  url: http://localhost:9000
+  accessKey:
+  secretKey:
